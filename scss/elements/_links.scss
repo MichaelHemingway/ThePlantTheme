@@ -1,0 +1,16 @@
+
+// LINKS
+a {
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0;
+    color: map-get($ui-color, brand-light);
+    text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+a:focus {
+    color: map-get($ui-color, brand-dark);
+}

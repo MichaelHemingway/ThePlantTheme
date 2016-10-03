@@ -1,0 +1,295 @@
+//BUTTONS
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+    border: 1px solid;
+    border-color: #ccc #ccc #bbb;
+    background: #e6e6e6;
+    //box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 15px 17px rgba(255, 255, 255, .5), inset 0 -5px 12px rgba(0, 0, 0, .05);
+    font-size: 12px;
+    font-size: .75rem;
+    line-height: 1;
+    padding: .6em 1em .4em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .8)
+}
+
+button:hover,
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover {
+    border-color: #ccc #bbb #aaa;
+    //box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8), inset 0 15px 17px rgba(255, 255, 255, .8), inset 0 -5px 12px rgba(0, 0, 0, .02)
+}
+
+button:active,
+button:focus,
+input[type=button]:active,
+input[type=button]:focus,
+input[type=reset]:active,
+input[type=reset]:focus,
+input[type=submit]:active,
+input[type=submit]:focus {
+    border: none;
+    // box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .5), inset 0 2px 5px rgba(0, 0, 0, .15)
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+textarea:focus {
+    // color: #111;
+    border-radius: 0;
+    //border: 1px solid #09BC8A;
+    outline: 0
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+input[type=search],
+textarea {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    //background: #f0f0f0;
+    color: $dark;
+    font-weight: 400;
+    font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-appearance: none;
+    /* for box shadows to show on iOS */
+    border-radius: 0;
+}
+
+.input {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin: 1em;
+    max-width: 350px;
+    vertical-align: top;
+}
+
+.input-field {
+    position: relative;
+    display: block;
+    float: right;
+    padding: 0.8em;
+    width: 60%;
+    border: none;
+    font-weight: 400;
+    -webkit-appearance: none;
+    /* for box shadows to show on iOS */
+}
+
+textarea.input-field {
+    float: none;
+    width: 100%;
+}
+
+.input-field:focus {
+    outline: none;
+}
+
+.input-label {
+    display: inline-block;
+    float: right;
+    padding: 0 1em;
+    width: 40%;
+    color: #696969;
+    font-weight: bold;
+    font-size: 70.25%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.input-label-content {
+    position: relative;
+    display: block;
+    padding: 1.6em 0;
+    width: 100%;
+}
+
+.input-manami {
+    overflow: hidden;
+}
+
+.input-field-manami {
+    width: 100%;
+    background: transparent;
+    padding: 0.5em;
+    margin-bottom: 2em;
+    z-index: 100;
+    opacity: 0;
+}
+
+.input-label-manami {
+    width: 100%;
+    position: absolute;
+    text-align: left;
+    padding: 0.5em 0;
+    pointer-events: none;
+    font-size: 1em;
+}
+
+.input-label-manami::before,
+.input-label-manami::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+.input-label-manami::before {
+    height: 100%;
+    background: #83AF9B;
+    top: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+}
+
+.input-label-manami::after {
+    height: 2px;
+    background: #83AF9B;
+    top: 100%;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+.input-label-content-manami {
+    padding: 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transition: -webkit-transform 0.2s, color 0.2s;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.input-field-manami:focus,
+.input-filled .input-field-manami {
+    opacity: 1;
+    border: none;
+    -webkit-transition: opacity 0s 0.2s;
+    transition: opacity 0s 0.2s;
+}
+
+.input-label-manami::before,
+.input-label-manami::after,
+.input-label-content-manami,
+.input-field-manami:focus,
+.input-filled .input-field-manami {
+    -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+    transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+}
+
+.input-field-manami:focus + .input-label-manami::before,
+.input-filled .input-label-manami::before {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.input-field-manami:focus + .input-label-manami::after,
+.input-filled .input-label-manami::after {
+    opacity: 0;
+}
+
+.input-field-manami:focus + .input-label-manami .input-label-content-manami,
+.input-filled .input-label-manami .input-label-content-manami {
+    color: #cbc4c6;
+    -webkit-transform: translate3d(0, 2.2em, 0) scale3d(0.65, 0.65, 1);
+    transform: translate3d(0, 2.2em, 0) scale3d(0.65, 0.65, 1);
+}
+
+
+/* General button style (reset) */
+
+.btn {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: none;
+    padding: 25px 80px;
+	width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    background: #cb4e4e;
+    color: #fff;
+    box-shadow: 0 6px #ab3c3c;
+    border-radius: 5px;
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+}
+
+.btn-2c:hover {
+    box-shadow: 0 4px #ab3c3c;
+    top: 2px;
+}
+
+.btn-2c:active {
+    box-shadow: 0 0 #ab3c3c;
+    top: 6px;
+}
+
+::-webkit-input-placeholder {
+    /* Safari, Chrome and Opera */
+    color: $grey;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: $grey;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $grey;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: $grey;
+}
+
+::-ms-input-placeholder {
+    /* Edge */
+    color: $grey;
+}
+
+::placeholder {
+    /* Standard one last! */
+    color: $grey;
+}
+
+.input-field-manami::-webkit-input-placeholder {
+    /* Safari, Chrome and Opera */
+    color: $white;
+}
+
+.input-field-manami::-ms-input-placeholder {
+    /* Safari, Chrome and Opera */
+    color: $white;
+}
+
+.input-field-manami::-moz-placeholder {
+    /* Safari, Chrome and Opera */
+    color: $white;
+}
+
+.input-field-manami::placeholder {
+    /* Safari, Chrome and Opera */
+    color: $white;
+}

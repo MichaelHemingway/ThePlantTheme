@@ -1,0 +1,75 @@
+/*
+Theme Name: The Plant
+Theme URI: http://theplantnewspaper.com/
+Author: Michael Hemingway
+Author URI: http://mikemingway.com/
+Description: The Plant's official Newspaper's Website's theme. 
+Version: 1.3.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: plant
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+The Plant is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+@-ms-viewport {
+    width: device-width;
+}
+
+
+// |-----------------------------------------------------------\\
+// | Global variables                                          ||
+// |-----------------------------------------------------------//
+
+$ui-color: ( 
+    brand: #1C5139,
+    brand-light: #1C6131, 
+    brand-dark: #343C55, 
+    alt-bright: #508991, 
+    alt-dark: #666 //add: red, error color
+);
+$cat-color: (
+    science: #26A69A,       // Material Teal 400
+    arts: #42A5F5,          // Material Blue 400
+    curiosities: #FF7043,   // Material Orange 400
+    news: #78909C,
+    sports: #ef5350,
+    voices: #7E57C2,
+    lifestyle: #BF82A5
+);
+
+$black: #222;
+$dark: #222;
+$grey: #bbb;
+$white: #f1f1f1;
+$light: #f1f1f1;
+
+// SEARXH & HEADER
+$header-height: 60px;
+$search-height: 70px;
+$nav-height: 30px;
+
+// |-----------------------------------------------------------\\
+// | Partials                                                  ||
+// |-----------------------------------------------------------//
+
+@import "utility/utility";
+
+@import "elements/elements";
+@import 'media/media';
+@import "layout/layout";
+@import "modules/modules";
+@import "navigation/navigation";
+@import "typography/typography";
+
+
+// |-----------------------------------------------------------\\
+// | Breakpoints                                               ||
+// |-----------------------------------------------------------//

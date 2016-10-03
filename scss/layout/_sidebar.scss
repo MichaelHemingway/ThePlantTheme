@@ -1,0 +1,48 @@
+#sidebar {
+	display: none;
+	width: 310px; //12px to spare.
+	margin: 12px 0 12px 12px;
+	list-style: none;
+	background: map-get($ui-color, brand);
+	ul {
+		list-style: none;
+	}
+}
+
+@media screen and (min-width:1080px) {
+	#sidebar {
+		float: right;
+		display: block;
+	}
+}
+
+.sidebar-widget {
+	padding: .5em;
+	color: $white;
+	h3 {
+		line-height: 1.6;
+	}
+	a {
+		color: map-get($ui-color, alt-bright);
+		&:hover {
+			color: lighten(map-get($ui-color, alt-bright), 5%);
+		}
+	}
+}
+
+.sidebar-img {
+	@include transition(.2s transition);
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+.short-post {
+	#sidebar {
+		display: none;
+	}
+}
+
+body.no-sidebar #sidebar {
+	display: none !important;
+}

@@ -1,0 +1,32 @@
+#global-footer {
+    background-color: #fff;
+    padding: 1em 3em;
+    width: 100%;
+    box-shadow: none;
+}
+
+.copyright,
+.footer-links {
+    margin: 0 auto;
+    max-width: 932px;
+    position: relative;
+    ul {
+        @extend .flex-container;
+        li {
+			padding: 1em;
+            height: 30px;
+            text-align: center;
+			white-space: nowrap;
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+            &:last-of-type {
+                border-right: none;
+            }
+        }
+    }
+}
+
+.footer-logo {
+    width: 100px;
+    margin-left: calc(50% - 50px);
+    margin-right: calc(50% - 50px)
+}

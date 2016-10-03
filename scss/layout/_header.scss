@@ -1,0 +1,285 @@
+// COMMON (Mobile first)
+#global-header {
+    z-index: 4;
+}
+
+.header {
+    height: $header-height;
+    width: 100%;
+    padding-right: 5%;
+    background-color: #fff;
+    position: fixed;
+    z-index: 3;
+    box-shadow: -2px 0 2px 0 rgba(0, 0, 0, .06), 2px 0 2px 0 rgba(0, 0, 0, .16), 0 2px 2px 0 rgba(0, 0, 0, .13)
+}
+
+.nav-container {
+    @include transform(translate3D(-105%, 0, 0)); // toggle off
+    @include transition(transform 300ms ease);
+    top: $header-height;
+    position: fixed;
+    width: 80vw;
+    background-color: #fff;
+    z-index: 3;
+}
+@media (min-width:450px) {
+	.nav-container {
+		width: 60vw;
+	}
+}
+
+.nav {
+    height: 100vh;
+    background: $white;
+}
+.nav-element {
+    width: 100%;
+    height: 2.5em;
+    float: left;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    a {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        padding-left: 1em;
+        color: #FFF;
+        &:focus {
+            border-bottom: none;
+        }
+    }
+}
+
+#global-header.bg-voices,
+.nav-element.bg-voices.nav-selected,
+.nav-element.bg-voices {
+    background-color: map-get($cat-color, voices);
+}
+
+#global-header.bg-news,
+.nav-element.bg-news.nav-selected,
+.nav-element.bg-news {
+    background-color: map-get($cat-color, news);
+}
+
+#global-header.bg-arts,
+.nav-element.bg-arts.nav-selected,
+.nav-element.bg-arts {
+    background-color: map-get($cat-color, arts);
+}
+
+#global-header.bg-sports,
+.nav-element.bg-sports.nav-selected,
+.nav-element.bg-sports {
+    background-color: map-get($cat-color, sports);
+}
+
+#global-header.bg-science,
+.nav-element.bg-science.nav-selected,
+.nav-element.bg-science {
+    background-color: map-get($cat-color, science);
+}
+
+#global-header.bg-curiosities,
+.nav-element.bg-curiosities.nav-selected,
+.nav-element.bg-curiosities {
+    background-color: map-get($cat-color, curiosities);
+}
+
+.nav a {
+    display: block;
+}
+
+.nav-container.nav-is-visible {
+    @include transform(translate3D(0%, 0, 0)) // toggle on
+}
+
+@media (min-width:700px) {
+    .nav-container {
+        @include transform(translate3D(0%, -$search-height - 1px, 0));
+        width: 100%;
+        box-shadow: -2px 0 0 0 rgba(0, 0, 0, .16), 2px 0 1px 0 rgba(0, 0, 0, .16), 0 2px 2px 0 rgba(0, 0, 0, .23);
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+    }
+    .nav {
+        max-width: 932px;
+        width: calc(100% - 100px);
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        li:first-of-type {
+            border-left: 1px solid rgba(0, 0, 0, .10);
+        }
+    }
+    .nav-element {
+        display: block;
+        width: 16.666667%; // (100/numItems)%
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-right: 1px solid rgba(0, 0, 0, .10);
+        white-space: nowrap;
+        a {
+            padding-left: 0;
+            color: map-get($ui-color, brand-dark)
+        }
+    }
+    // SEARCH
+    .nav-container.nav-is-visible {
+        @include transform(translate3D(0, 0, 0))
+    }
+    #dismiss-overlay {
+        width: 100%;
+    }
+    .nav-element:hover a {
+        color: #fff;
+        -webkit-transition: background-color 0.2s;
+        transition: background-color 0.2s;
+		text-decoration: none;
+    }
+    .nav-element.bg-voices,
+    .nav-element.bg-news,
+    .nav-element.bg-arts,
+    .nav-element.bg-sports,
+    .nav-element.bg-science,
+    .nav-element.bg-curiosities {
+        background-color: #fff;
+    }
+    .nav-element.bg-voices:hover {
+        background-color: map-get($cat-color, voices);
+    }
+    .nav-element.bg-news:hover {
+        background-color: map-get($cat-color, news);
+    }
+    .nav-element.bg-arts:hover {
+        background-color: map-get($cat-color, arts);
+    }
+    .nav-element.bg-sports:hover {
+        background-color: map-get($cat-color, sports);
+    }
+    .nav-element.bg-science:hover {
+        background-color: map-get($cat-color, science);
+    }
+    .nav-element.bg-curiosities:hover {
+        background-color: map-get($cat-color, curiosities);
+    }
+    .header {
+        box-shadow: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+    }
+    #global-header.headroom-unpinned+.nav-container {
+        @include transform(translateY(-7.2em));
+    }
+}
+
+@media (max-width: 1032px) {
+    .nav {
+        width: 100%;
+    }
+}
+
+#dismiss-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: $header-height;
+    right: 0; // Change to left depending on mobile nav side
+    z-index: 2;
+}
+
+.logo {
+    float: left;
+    margin-top: .55em;
+    margin-left: 5%;
+    width: 160px;
+    -webkit-transition: width .5s, -webkit-transform .5s;
+    transition: width .5s, -webkit-transform .5s
+}
+
+.logo-img {
+    width: 160px;
+    height: 40px;
+    -webkit-transition: all .4s, -webkit-transform .5s;
+    transition: all .5s, -webkit-transform .4s;
+}
+
+.logo:focus {
+    border-bottom: none;
+}
+
+// NAV TRIGGER BUTTON
+.nav-trigger {
+    position: relative;
+    float: right;
+    height: 45px;
+    width: 45px;
+    margin-top: 6px;
+    overflow: hidden;
+    color: transparent;
+    -webkit-transition: margin .5s ease-in-out;
+    transition: margin .5s ease-in-out;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.nav-trigger span,
+.nav-trigger span:after,
+.nav-trigger span:before {
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    background-color: #000;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+.nav-trigger span {
+    top: 21px;
+    left: 8px;
+    @include transition(background .1s);
+}
+
+.nav-trigger span:after,
+.nav-trigger span:before {
+    content: '';
+    left: 0;
+    @include transition(transform .2s);
+}
+
+.nav-trigger span:before {
+    bottom: 8px
+}
+
+.nav-trigger span:after {
+    top: 8px
+}
+
+.nav-is-visible .nav-trigger span {
+    background-color: rgba(255, 255, 255, 0)
+}
+
+.nav-is-visible .nav-trigger span:after,
+.nav-is-visible .nav-trigger span:before {
+    background-color: #000
+}
+
+.nav-is-visible .nav-trigger span:before {
+    @include transform( translate3D(0, 8px, 0) rotate(-45deg));
+}
+
+.nav-is-visible .nav-trigger span:after {
+    @include transform( translate3D(0, -8px, 0) rotate(45deg));
+}
+
+.nav-container.nav-is-visible {
+    visibility: visible;
+}

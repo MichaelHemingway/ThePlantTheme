@@ -1,0 +1,128 @@
+.index-title {
+    padding: 10px;
+    padding-bottom: 20px;
+    margin: 10px 0 0;
+    background-color: #fff;
+}
+
+// specific to the cards, this is the little 'up' animation.
+.transition {
+    transition: border-color .25s ease, box-shadow .25s ease;
+    -webkit-transition: -webkit-transform .5s
+}
+
+// BIG STORY IMG
+#big-story-img {
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    top: 1.6em;
+	top: 0;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    position: fixed;
+    bottom: 0;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out
+}
+
+#mobile-big-story-title {
+    width: 280px
+}
+
+#desktop-big-story-title {
+    width: 400px
+}
+
+@media (max-width:660px) {
+    #desktop-big-story-title {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+@media (min-width:660px) {
+    #mobile-big-story-title {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+//THE FLEX CONTAINER & INDEX
+.flex-container {
+    padding: 0;
+    margin: 0 -10px 0 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap
+}
+
+.flex-item {
+    width: 200px;
+    margin-top: 10px;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin-right: 10px;
+    background-color: #fff
+}
+
+.flex-item.three-wide {
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+    width: 300px
+}
+
+.flex-item.six-wide {
+    -webkit-box-flex: 3;
+    -webkit-flex-grow: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3;
+    width: 550px
+}
+
+.flex-item.eight-wide {
+    -webkit-box-flex: 4;
+    -webkit-flex-grow: 4;
+    -ms-flex-positive: 4;
+    flex-grow: 4;
+    width: 800px
+}
+
+// Adjust to look better on bigger devices.
+@media screen and (min-width: 700px) {
+    .flex-item.six-wide {
+        width: 440px;
+    }
+}
+
+.card:hover {
+    box-shadow: -2px 0 2px 0 rgba(0, 0, 0, .16), 2px 0 2px 0 rgba(0, 0, 0, .16), 0 2px 2px 0 rgba(0, 0, 0, .23);
+    transform: translate3d(0, -3px, 0)
+}
+
+.card {
+    .author, .author a {
+        line-height: .5;
+        color: $grey;
+    }
+    .author a:hover {
+        color: darken($grey, 20%)
+    }
+}
+
+.card-wrapper {
+    padding: 10px
+}
+
+.card-title {
+//    line-height: 1;
+}
+
+.category-description {
+    font-size: 11px
+}
