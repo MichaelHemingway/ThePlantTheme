@@ -2,7 +2,7 @@ body.login {
   background-color: #222;
 }
 body.login div#login h1 a {
-  background-image: url(../img/ui/login-logo.png)!important;
+  background-image: url(login-logo.png)!important;
 }
 body.login div#login form#loginform p.submit input#wp-submit {
     background-color: #1C6139;

@@ -1,5 +1,5 @@
-<?php get_my_header(); ?>
-	<main role="main" class="bg-white">
+<?php get_header(); ?>
+	<main role="main" class="">
 		<section class="clearfix site-container">
 			<h1 class="u-centered"><?php the_title(); ?></h1>
 			<?php //get_sidebar(); ?>

@@ -11,7 +11,24 @@
     }
 }
 
-@import 'article';
+.article-info {
+	margin-top: .6em;
+}
+
+#the-article {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.post-edit-btn {
+  color: #fff;
+  background: map-get($ui-color, 'brand');
+  padding: 0.5rem;
+  border-radius: 3px;
+  float: right;
+  margin-top: -13px;
+}
+
 @import 'loop';
 @import 'header';
 @import 'footer';

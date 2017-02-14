@@ -1,4 +1,4 @@
-<?php get_my_header(); ?>
+<?php get_header(); ?>
 
 <main role="main" id="panel">
     <!-- section -->
@@ -17,36 +17,33 @@
             <figure>
                 <?php the_post_thumbnail(); ?>
                 <figcaption>
-					<span class="media-credit"><?php $var = the_media_credit_html(get_post_thumbnail_id());
+					<span class="media-credit"><?php $var = '';//the_media_credit_html(get_post_thumbnail_id());
                 if ($var != '') {echo $var; }?></span>
-					<div class="caption"><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></div> 
+					<div class="caption"><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></div>
                 </figcaption>
             </figure>
             <!-- /post thumbnail -->
             <?php endif; ?>
-            
-            <input class='tgl tgl-light noselect' id='dark-ui-toggle' type='checkbox'>
-            <label class='tgl-btn noselect' for='dark-ui-toggle'></label>
 
             <div class="article-info">
                 <i class="author" rel="author"><?php _e( 'By', 'html5blank' ); ?> <?php the_author_posts_link(); ?></i><br />
-                <?php edit_post_link(); ?>
+                <?php edit_post_link('Edit this', '','', 0, 'post-edit-btn'); ?>
             </div>
             <hr />
-            
+
             <?php //get_sidebar(); ?>
-            
+
             <div id="the-article">
                 <?php the_content(); ?>
             </div>
-            
+
             <?php the_tags( __( '#', 'html5blank' ), ' #', '<br>'); ?>
 
             <hr />
             <?php post_nav_background(); ?>
             <?php the_post_navigation( array( 'next_text'=> '<span class="meta-nav helvetica">' . __( 'Next:', 'twentyfifteen' ) . '</span> ' . '
             <div class="post-title-nav">%title</div>', 'prev_text' => '<span class="meta-nav helvetica">' . __( 'Previous:', 'twentyfifteen' ) . '</span> ' . ' <div class="post-title-nav">%title</div>', ) ); ?>
-            
+
         </article>
         <!-- /article -->
         <?php endwhile; ?>
