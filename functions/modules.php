@@ -1,8 +1,14 @@
-<?php 
+<?php
 
 /*------------------------------------*\
     External Modules
 \*------------------------------------*/
+
+// limit tags
+add_filter('term_links-post_tag','limit_to_one_tag');
+	function limit_to_one_tag($terms) {
+	return array_slice($terms,0,1,true);
+}
 
 // Add page slug to body class, love this - Credit: Starkers Wordpress Theme
 function add_slug_to_body_class($classes)

@@ -30,7 +30,7 @@ gulp.task('sass', function () {
 // similarly to the sass tast, scripts compiles and concatinates js files and reloads the browser
 gulp.task('scripts', function() {
 	// script paths
-	var jsSources = 'js/*.js',
+	var jsSources = 'js/**/*.js',
 	    jsDist = 'assets/js/';
 
   return gulp.src(jsSources)

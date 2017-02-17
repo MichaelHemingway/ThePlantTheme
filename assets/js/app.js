@@ -8,9 +8,11 @@
   'use strict';
 
   // masonry
-  var msnry = new Masonry( '.container', {
-    columnWidth: 200,
-    itemSelector: '.flex-item'
+  var msnry = new Masonry( '.flex-container', {
+    itemSelector: '.flex-item',
+    percentPosition: true
+    columnWidth: 200
+    gutter: 10
   });
 
   // HELPER FUNCTIONS

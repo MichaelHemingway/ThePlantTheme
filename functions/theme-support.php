@@ -24,8 +24,8 @@ function plant_theme_support() {
 	         	'comment-list',
 	         	'comment-form',
 	         	'search-form',
-				'gallery',
-				'caption'
+						'gallery',
+						'caption'
 	         )
 	);
 
@@ -46,8 +46,8 @@ add_filter('upload_mimes', 'plant_mime_types');
 
 function plant_add_image_size() {
 	if ( function_exists( 'add_image_size' ) ) {
-		add_image_size('large', 932, '', true);
-		add_image_size('medium', 250, '', true);
+		add_image_size('large', 932, 524, true);
+		add_image_size('medium', 640, 480, true);
 		add_image_size('small', 120, '', true);
 		add_image_size('huge', 1200, '', true);
 	}

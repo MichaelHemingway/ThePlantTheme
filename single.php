@@ -43,6 +43,7 @@
             <?php post_nav_background(); ?>
             <?php the_post_navigation( array( 'next_text'=> '<span class="meta-nav helvetica">' . __( 'Next:', 'twentyfifteen' ) . '</span> ' . '
             <div class="post-title-nav">%title</div>', 'prev_text' => '<span class="meta-nav helvetica">' . __( 'Previous:', 'twentyfifteen' ) . '</span> ' . ' <div class="post-title-nav">%title</div>', ) ); ?>
+            <?php plant_related_posts(); ?>
 
         </article>
         <!-- /article -->

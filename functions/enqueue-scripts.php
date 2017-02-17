@@ -1,19 +1,20 @@
 <?php
 function site_scripts() {
 	if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
-		wp_register_script('prod-js', get_template_directory_uri() . '/assets/js/app.min.js', array('masonry-js'), 'latest', true); // Custom
+		wp_register_script('prod-js', get_template_directory_uri() . '/assets/js/app.min.js', array('mason'), '4.3.2', true); // Custom
 		wp_enqueue_script('prod-js'); // Enqueue it!
 	}
+
+	if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
+		wp_register_script('mason', get_template_directory_uri() . '/assets/js/libs/masonry.js', array(), '4.1.2', true); // Custom
+		wp_enqueue_script('mason'); // Enqueue it!
+	}
+
 
   // Comment reply script for threaded comments
   if (is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
       wp_enqueue_script('comment-reply');
   }
-
-	if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
-		wp_register_script('masonry-js', get_template_directory_uri() . '/assets/js/lib/masonry.js', array(), 'latest', true); // Custom
-		wp_enqueue_script('masonry-js'); // Enqueue it!
-	}
 
 	if (is_page('submit')) {
 		wp_register_script('submit-page', get_template_directory_uri() . '/assets/js/submit-page.min.js', array() , '1.0.4', true);

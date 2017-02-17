@@ -1,0 +1,47 @@
+// BIG STORY IMG
+
+#big-story-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  top: 1.6em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: -2;
+}
+
+#desktop-big-story-title,
+#mobile-big-story-title {
+  position: absolute;
+  top: 0px;
+}
+
+#desktop-big-story-title {
+    visibility: hidden;
+    display: none;
+    width: 500px;
+}
+
+#mobile-big-story-title {
+  width: 300px;
+}
+
+main.first-page {
+  margin-top: 30rem;
+  padding: 0 0 2rem;
+}
+
+// larger than mobile
+@media (min-width:700px) {
+  #mobile-big-story-title {
+    visibility: hidden;
+    display: none;
+  }
+
+  #desktop-big-story-title {
+    visibility: visible;
+    display: block;
+  }
+}

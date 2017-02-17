@@ -45,3 +45,56 @@ function remove_footer_admin () {
 }
 
 add_filter('admin_footer_text', 'remove_footer_admin');
+
+
+
+/** Add post size types
+* Replaces the deprecated post classes feature, controlling post sizes in the loop via css classes.
+* @since Plant W2017
+*/
+function post_size() {
+	add_meta_box('post_size', 'Post Visibility', 'post_size_meta', 'post' );
+	//you can change the 4th paramter i.e. post to custom post type name, if you want it for something else
+
+}
+
+add_action( 'add_meta_boxes', 'post_size' );
+
+function post_size_meta( $post ) {
+	 wp_nonce_field( 'post_size', 'post_size_nonce' );
+	 $value = get_post_meta( $post->ID, 'post_size', true ); //post_size is a meta_key. Change it to whatever you want
+?>
+<input type="radio" name="image_align" value="" <?php checked( $value, '' ); ?>> Default <br>
+<input type="radio" name="image_align" value="medium" <?php checked( $value, 'medium' ); ?> > Medium <br>
+<input type="radio" name="image_align" value="large" <?php checked( $value, 'large' ); ?> > Large <br>
+<input type="radio" name="image_align" value="centerfold" <?php checked( $value, 'centerfold' ); ?> > Centerfold <br>
+
+<?php
+}
+
+function ps_save_meta_box_data( $post_id ) {
+	/*
+	 * We need to verify this came from our screen and with proper authorization,
+	 * because the save_post action can be triggered at other times.
+	 */
+
+	// Check if our nonce is set.
+	if ( !isset( $_POST['post_size_nonce'] ) ) { return; }
+
+	// Verify that the nonce is valid.
+	if ( !wp_verify_nonce( $_POST['post_size_nonce'], 'post_size' ) ) { return; }
+
+	// If this is an autosave, our form has not been submitted, so we don't want to do anything.
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return; }
+
+	// Check the user's permissions.
+	if ( !current_user_can( 'edit_post', $post_id ) ) { return; }
+
+	// Sanitize user input.
+	$new_meta_value = ( isset( $_POST['image_align'] ) ? sanitize_html_class( $_POST['image_align'] ) : '' );
+
+	// Update the meta field in the database.
+	update_post_meta( $post_id, 'post_size', $new_meta_value );
+}
+
+add_action( 'save_post', 'ps_save_meta_box_data' );
