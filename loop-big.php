@@ -16,7 +16,7 @@
         <?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' ';} ?></p>
     <!-- post title -->
     <h2>
-	    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="helvetica" itemprop="headline"><?php the_title(); ?></a>
+	    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="card-title" itemprop="headline"><?php the_title(); ?></a>
     </h2>
     <!-- /post title -->
 

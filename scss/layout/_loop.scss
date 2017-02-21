@@ -8,7 +8,9 @@
 }
 
 .flex-container {
-  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .flex-item {
@@ -17,18 +19,26 @@
   box-sizing: border-box;
   background-color: $white;
   margin: 10px 10px 0 0;
+  flex-grow: 1;
 }
 
-.flex-item.medium {}
+.flex-item.medium {
+  flex-grow: 2;
+}
 
-.flex-item.large {}
+.flex-item.large {
+  flex-grow: 3;
+}
 
-.flex-item.centerfold {}
+.flex-item.centerfold {
+  flex-grow: 5;
+}
 
 .card {
-  .author,
-  .author a {
-    line-height: 0.5;
+  .author {
+    a { color: $grey; }
+    bottom: 1rem;
+    line-height: 1;
     color: $grey;
   }
 
@@ -39,7 +49,6 @@
 
 .tagged {
   background: map-get($ui-color, 'brand');
-
   position: absolute;
   top: 0;
   right: 10px;
@@ -54,7 +63,8 @@
 }
 
 .card-title {
-  line-height: 1.2;
+  line-height: 1;
+  font-size: 32px;
 }
 
 .category-description {
@@ -71,7 +81,7 @@
 // Adjust to look better on bigger devices.
 @media screen and (min-width: 1080px) {
   .flex-item {
-    width: 22%;
+    width: 25%;
   }
 
   .flex-item.medium {
@@ -79,7 +89,7 @@
   }
 
   .flex-item.large {
-    width: 44%;
+    width: 66%;
   }
 
   .flex-item.centerfold {

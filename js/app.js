@@ -7,14 +7,6 @@
 (function () {
   'use strict';
 
-  // masonry
-  var msnry = new Masonry( '.flex-container', {
-    itemSelector: '.flex-item',
-    percentPosition: true
-    columnWidth: 200
-    gutter: 10
-  });
-
   // HELPER FUNCTIONS
 	var $ = function (id) {
 		return document.getElementById(id);
