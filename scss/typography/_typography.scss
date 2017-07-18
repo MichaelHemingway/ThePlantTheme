@@ -1,19 +1,19 @@
 .playfair {
-  font-family: 'Merriweather', serif;
-  line-height: 2rem;
+	font-family: Helvetica Neue,Helvetica,sans-serif;
+	line-height: 2rem;
 }
 
 .huge {
-  font-weight: 700;
-  line-height: 1em;
-  font-size: 38px;
-  text-overflow: ellipsis;
+	font-weight: 700;
+	line-height: 1em;
+	font-size: 38px;
+	text-overflow: ellipsis;
 }
 
 .date,
 .small {
-  font-size: 11px;
-  color: $grey;
+	font-size: 11px;
+	color: $grey;
 }
 
 //Standards
@@ -21,70 +21,69 @@ cite,
 dfn,
 em,
 i {
-  font-style: italic;
+	font-style: italic;
 }
 
 h2 {
-  font-size: 1.5em;
+	font-size: 1.5em;
 }
 
 h3 {
-  font-size: 1.17em;
+	font-size: 1.17em;
 }
 
 pre {
-  white-space: pre-wrap;
-  background: $black;
-  color: $grey;
-  font-family: Courier, monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  margin-bottom: 1.6em;
-  padding: 1.6em;
+	white-space: pre-wrap;
+	background: $black;
+	color: $grey;
+	font-family: Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
 }
 
 kbd,
 p code,
 tt,
 var {
-  font-family: Courier, monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
-  background: #ccc;
-  padding: 3px;
-  border-radius: 2px;
+	font-family: Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	background: #ccc;
+	padding: 3px;
+	border-radius: 2px;
 }
 
 abbr {
-  border-bottom: 1px dotted #666;
-  cursor: help;
+	border-bottom: 1px dotted #666;
+	cursor: help;
 }
 
 ins,
 mark {
-  background: map-get($ui-color, alt-light);
+	background: map-get($ui-color, alt-light);
 }
 
 blockquote {
-  padding: 0.5em 0 0.5em 0.6em;
-  border-left: solid $black 4px;
-
+	padding: 0.5em 0 0.5em 0.6em;
+	border-left: solid $black 4px;
 }
 
 html[lang="fr"] q {
-  quotes: "\00ab" "\00bb";
+	quotes: "\00ab" "\00bb";
 }
 
 //Article related
 .underline {
-  border-bottom: 3px solid #FFFF00;
-  box-shadow: inset 0 -6px 0 #FFFF00;
+	border-bottom: 3px solid #FFFF00;
+	box-shadow: inset 0 -6px 0 #FFFF00;
 }
 
 .underline:hover {
-  background-color: #FFFF00;
-  color: $black !important;
-  text-decoration: none;
+	background-color: #FFFF00;
+	color: $black !important;
+	text-decoration: none;
 }
 @import 'article';

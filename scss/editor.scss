@@ -1,0 +1,39 @@
+$black: #222;
+$dark: #222;
+$grey: #bbb;
+$white: #f1f1f1;
+$light: #f1f1f1;
+
+$ui-color: (
+  brand:        #1C5139,
+  brand-light:  #1C6131,
+  brand-dark:   #343C55,
+  alt-bright:   #508991,
+  alt-dark:     #666
+);
+
+$cat-color: (
+  science:      #26A69A, // Material Teal 400
+  arts:         #42A5F5, // Material Blue 400
+  curiosities:  #FF7043, // Material Orange 400
+  news:         #78909C,
+  sports:       #ef5350,
+  voices:       #7E57C2,
+  lifestyle:    #BF82A5
+);
+
+@import "typography/typography";
+@import url(https://fonts.googleapis.com/css?family=Merriweather:900);
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em
+}
+
+#tinymce {
+	h1, h2, h3 {
+		font-family: Helvetica Neue,Helvetica,sans-serif;
+	}
+}

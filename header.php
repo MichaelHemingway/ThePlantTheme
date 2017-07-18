@@ -16,7 +16,7 @@
     <link href="<?php echo get_template_directory_uri(); ?>/favicon.ico" rel="shortcut icon">
     <link href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/touch.png" rel="apple-touch-icon-precomposed">
     <!-- <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400' rel='stylesheet' type='text/css'> -->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:900" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Merriweather:900" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
     <?php wp_head(); ?>
