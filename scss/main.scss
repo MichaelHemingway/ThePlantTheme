@@ -24,13 +24,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 // |-----------------------------------------------------------\\
 // | Global variables                                          ||
 // |-----------------------------------------------------------//
-$ui-color: (
-  brand:        #1C5139,
-  brand-light:  #1C6131,
-  brand-dark:   #343C55,
-  alt-bright:   #508991,
-  alt-dark:     #666
-);
+
 
 $cat-color: (
   science:      #26A69A, // Material Teal 400
@@ -42,11 +36,22 @@ $cat-color: (
   lifestyle:    #BF82A5
 );
 
-$black: #222;
+$brand: #2A603B;
+$brand-dark: #2E372E;
+
+$black: #2E211B;
 $dark: #222;
-$grey: #bbb;
-$white: #f1f1f1;
+$grey: #eee;
+$white: #fff;
 $light: #f1f1f1;
+
+$ui-color: (
+  brand:        $brand,
+  brand-light:  $brand-dark,
+  brand-dark:   #2E372E,
+  alt-bright:   $brand,
+  alt-dark:     #666
+);
 
 // SEARCH & HEADER
 $header-height: 60px;

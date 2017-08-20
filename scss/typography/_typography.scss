@@ -1,15 +1,3 @@
-.playfair {
-	font-family: Helvetica Neue,Helvetica,sans-serif;
-	line-height: 2rem;
-}
-
-.huge {
-	font-weight: 700;
-	line-height: 1em;
-	font-size: 38px;
-	text-overflow: ellipsis;
-}
-
 .date,
 .small {
 	font-size: 11px;
@@ -77,13 +65,13 @@ html[lang="fr"] q {
 
 //Article related
 .underline {
-	border-bottom: 3px solid #FFFF00;
-	box-shadow: inset 0 -6px 0 #FFFF00;
+	border-bottom: 3px solid #4D8FAC;
+	box-shadow: inset 0 -6px 0 #4D8FAC;
 }
 
 .underline:hover {
-	background-color: #FFFF00;
-	color: $black !important;
+	background-color: #4D8FAC;
+	color: $white;
 	text-decoration: none;
 }
 @import 'article';

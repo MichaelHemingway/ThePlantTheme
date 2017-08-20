@@ -1,38 +1,43 @@
 .site-container {
-  margin-left: auto;
-  margin-right: auto;
-
-  width: calc(100% - 100px);
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 70vh;
+	width: calc(100% - 100px);
 }
 
 @media (max-width:767px) {
-  .site-container {
-    width: calc(100% - 40px);
-  }
+	.site-container {
+		width: calc(100% - 40px);
+	}
 }
 
 @media (min-width:1200px) {
-  .site-container {
-    max-width: 1600px;
-  }
+	.site-container {
+		max-width: 1600px;
+	}
 }
 
-.article-info {
-  margin-top: 0.6em;
+.article-header {
+	position: relative;
+
+	.article-featured-image {
+		max-height: 50vh;
+		overflow: hidden;
+	}
 }
 
 #the-article {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.post-edit-btn {
-  color: #fff;
-  background: map-get($ui-color, 'brand');
-  padding: 0.5rem;
-  border-radius: 3px;
-  float: right;
-  margin-top: -13px;
+	.article-title {
+		width: 100%;
+		vertical-align: top;
+		max-width: 900px;
+		margin-right: -10em;
+		margin-top: -5rem;
+		margin-bottom: 0;
+	}
+	max-width: 700px;
+	margin: 0 auto;
+	padding-bottom: 3rem;
 }
 
 @import 'loop';

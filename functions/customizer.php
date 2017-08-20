@@ -31,7 +31,6 @@ if (class_exists('WP_Customize_Control'))
 }
 
 
-
 function plant_customizer_register( $wp_customize ) {
 
 	/* Panels */
@@ -95,29 +94,13 @@ function plant_customizer_register( $wp_customize ) {
 				)
 		);
 
-		// Featured Story Desktop Title
-		$wp_customize->add_setting( 'bigstory_tit_desktop' );
-		$wp_customize->add_control(
-			new WP_Customize_Image_Control(
-				$wp_customize,
-				'bs_tit_d', array(
-					'label'    => __( 'Desktop Title', 'plant' ),
-					'section'  => 'section_bs',
-					'settings' => 'bigstory_tit_desktop',
-				)
-			)
-		);
-
 		// Featured Story Mobile Title
 		$wp_customize->add_setting( 'bigstory_tit_mobile' );
 		$wp_customize->add_control(
-			new WP_Customize_Image_Control(
-				$wp_customize,
-				'bs_tit_m', array(
-					'label'    => __( 'Mobile Title', 'plant' ),
-					'section'  => 'section_bs',
-					'settings' => 'bigstory_tit_mobile',
-				)
+			'bs_tit_m', array(
+				'label'    => __( 'Featured Story Headline', 'plant' ),
+				'section'  => 'section_bs',
+				'settings' => 'bigstory_tit_mobile'
 			)
 		);
 

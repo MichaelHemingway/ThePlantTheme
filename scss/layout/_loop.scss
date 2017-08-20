@@ -1,98 +1,143 @@
+/**
+ * The Loop!
+ * 
+ * 
+ */
 
-// specific to the cards, this is the little 'up' animation.
-.index-title {
-  margin: 10px 0 0;
-  font-size: 2rem;
-  color: white;
-  padding: 2rem;
+.index .stories{
+	max-width: 1200px;
+	margin: 4em auto 4em auto;
+	padding: 1em;
+}
+
+.stories {
+	.section-header {
+		width: 100%;
+		background: #ccc;
+	}
+	.section-title {
+		background: $brand-dark;
+		display: inline-block;
+		padding: 3px 6px 3px 6px;
+		color: #eee;
+		font-size: 14px;
+	}
 }
 
 .flex-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-right: -10px;
 }
 
-.flex-item {
-  padding: 10px;
-  width: 100%;
-  box-sizing: border-box;
-  background-color: $white;
-  margin: 10px 10px 0 0;
-  flex-grow: 1;
-}
 
 .flex-item.medium {
-  flex-grow: 2;
+	flex-grow: 2;
 }
 
 .flex-item.large {
-  flex-grow: 3;
+	flex-grow: 3;
 }
 
 .flex-item.centerfold {
-  flex-grow: 5;
+	flex-grow: 5;
 }
 
-.card {
-  .author {
-    a { color: $grey; }
-    bottom: 1rem;
-    line-height: 1;
-    color: $grey;
-  }
+// the new 'cards'
 
-  .author a:hover {
-    color: darken($grey, 20%);
-  }
+.stories .story {
+	line-height: 17px;
+	position: relative;
+	padding-bottom: 3rem;
+	margin: 10px 10px 0 0;
+	flex-grow: 1;
+
+
+	.item-image {
+		display: block;
+		max-height: 140px;
+		overflow: hidden;
+	}
+
+	.item-title {
+		font-size: 18px;
+	}
+	
+	.author {
+		position: absolute;
+		bottom: 10px;
+		font-size: 12px;
+		font-style: italic;
+		text-transform: uppercase;
+	}
+
+	.author a:hover {
+		color: darken($grey, 20%);
+	}
+
+	.tagged {
+		background: map-get($ui-color, 'brand-dark');
+		position: absolute;
+		font-size: 12px;
+		text-transform: uppercase;
+		top: 0;
+		right: 0;
+		a {
+			color: white;
+			padding: 3px 6px;
+		}
+	}
+
+	.item-category {
+		font-size: 12px;
+	}
 }
 
-.tagged {
-  background: map-get($ui-color, 'brand');
-  position: absolute;
-  top: 0;
-  right: 10px;
-  a {
-    color: white;
-    padding: 3px 6px;
-  }
+.featured.stories .story{
+	width: 49%;
+	flex-grow: 1;
+	margin: 10px 10px 0 0;
+
+	.item-image {
+		max-height: 300px;
+	}
 }
 
 .card-wrapper {
-  padding-top: 10px;
+	padding-top: 10px;
 }
 
-.card-title {
-  line-height: 1;
-  font-size: 32px;
-}
-
-.category-description {
-  font-size: 12px;
-}
 
 // Adjust to look better on bigger devices.
 @media screen and (min-width: 550px) {
-  .flex-item {
-    width: 48%;
-  }
+	.stories .story {
+		width: 40%;
+	}
 }
 
 // Adjust to look better on bigger devices.
-@media screen and (min-width: 1080px) {
-  .flex-item {
-    width: 25%;
-  }
+@media screen and (min-width: 900px) {
+	.stories .story {
+		width: 20%;
+	}
 
-  .flex-item.medium {
-    width: 33%;
-  }
+	.featured.stories {
+		.story.medium {
+			width: 30%;
+		}
+		.story.large {
+			width: 66%;
+		}
+		.story.centerfold {
+			width: 100%;
+			.item-image {
+				min-height: 950px;
+			}
+		}
+	}
+}
 
-  .flex-item.large {
-    width: 66%;
-  }
-
-  .flex-item.centerfold {
-    width: 100%;
-  }
+.stories.search .story {
+	max-width: 400px;
 }

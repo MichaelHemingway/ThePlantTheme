@@ -64,34 +64,6 @@ function remove_admin_bar() {
 }
 add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
 
-function post_nav_background() {
-	if (!is_single()) {
-		return;
-	}
-	$previous = (is_attachment()) ? get_post(get_post()->post_parent) : get_adjacent_post(false, '', true);
-	$next = get_adjacent_post(false, '', false);
-	$css = '';
-	if (is_attachment() && 'attachment' == $previous->post_type) {
-		return;
-	}
-	if ($previous && has_post_thumbnail($previous->ID)) {
-		$prevthumb = wp_get_attachment_image_src(get_post_thumbnail_id($previous->ID) , 'large');
-		$css.= '
-			.post-navigation .nav-previous { background-image: url(' . esc_url($prevthumb[0]) . '); }
-			.post-navigation .nav-previous .post-title-nav, .post-navigation .nav-previous a:hover .post-title-nav, .post-navigation .nav-previous .meta-nav { color: #fff; }
-			.post-navigation .nav-previous a:before { background-color: rgba(0, 0, 0, 0.4); }
-		';
-	}
-	if ($next && has_post_thumbnail($next->ID)) {
-		$nextthumb = wp_get_attachment_image_src(get_post_thumbnail_id($next->ID) , 'large');
-		$css.= '
-			.post-navigation .nav-next { background-image: url(' . esc_url($nextthumb[0]) . '); border-top: 0; }
-			.post-navigation .nav-next .post-title-nav, .post-navigation .nav-next a:hover .post-title-nav, .post-navigation .nav-next .meta-nav { color: #fff; }
-			.post-navigation .nav-next a:before { background-color: rgba(0, 0, 0, 0.4); }
-		';
-	}
-	echo "<style>" . $css . "</style>";
-}
 /*
 *Author: Matt Dulin
 *Author URI: http://mattdulin.com

@@ -13,11 +13,11 @@
 	margin-bottom: 1em;
 	a {
 		color: map-get($ui-color, brand-light);
-		border-bottom: 3px solid #FFFF00;
-		box-shadow: inset 0 -6px 0 #FFFF00;
+		border-bottom: 2px solid #4D8FAC;
+		box-shadow: inset 0 -6px 0 #4D8FAC;
 		&:hover {
-			background-color: #FFFF00;
-			color: $black !important;
+			background-color: #4D8FAC;
+			color: $white !important;
 			text-decoration: none;
 		}
 	}
@@ -46,9 +46,6 @@
 }
 
 @media (min-width:500px) {
-	.article-title {
-		font-size: 2.8em
-	}
 	#the-article p {
 		font-size: 21px;
 		line-height: 1.58;
@@ -66,6 +63,17 @@
 	}
 	figcaption {
 		margin: 0 20px
+	}
+}
+
+@media (max-width:1300px) {
+	#the-article .article-title {
+		max-width: 900px;
+		margin-top: 1rem;
+		margin-bottom: 0;
+	}
+	.post-byline-image {
+		display: none;
 	}
 }
 
@@ -98,3 +106,7 @@ q {
 	margin-bottom: -4px;
 	font-family: 'Merriweather', serif;
 }
+
+// body.page {
+// 	padding-top: 6em;
+// }

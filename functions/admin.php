@@ -62,7 +62,7 @@ add_action( 'add_meta_boxes', 'post_size' );
 
 function post_size_meta( $post ) {
 	 wp_nonce_field( 'post_size', 'post_size_nonce' );
-	 $value = get_post_meta( $post->ID, 'post_size', true ); //post_size is a meta_key. Change it to whatever you want
+	 $value = get_post_meta( $post->ID, 'post_size', true ); // post_size is a meta_key. Change it to whatever you want
 ?>
 <input type="radio" name="image_align" value="" <?php checked( $value, '' ); ?>> Default <br>
 <input type="radio" name="image_align" value="medium" <?php checked( $value, 'medium' ); ?> > Medium <br>

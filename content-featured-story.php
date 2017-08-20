@@ -1,9 +1,8 @@
 <?php
 if (get_theme_mod('bigstory_bg_mobile')) {
 	echo '<!-- Featured Story -->
-		<a href="'. get_theme_mod('bigstory_link') .'" >
-			<img src="'. get_theme_mod('bigstory_tit_mobile') . '" id="mobile-big-story-title" />
-			<img src="'. get_theme_mod('bigstory_tit_desktop'). '" id="desktop-big-story-title" />
+		<a href="'. get_theme_mod('bigstory_link') .'" class="featured-story">
+			<span id="big-story-title">'. get_theme_mod('bigstory_tit_mobile') .'</span>
 
 			<div id="big-story-img" class="big-story-img"></div>
 		</a>

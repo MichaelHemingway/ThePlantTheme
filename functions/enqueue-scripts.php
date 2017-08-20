@@ -1,7 +1,7 @@
 <?php
 function site_scripts() {
 	if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
-		wp_register_script('prod-js', get_template_directory_uri() . '/assets/js/app.min.js', array(), '4.3.3', true); // Custom
+		wp_register_script('prod-js', get_template_directory_uri() . '/assets/js/app.min.js', array(), '4.9.0', true); // Custom
 		wp_enqueue_script('prod-js'); // Enqueue it!
 	}
 

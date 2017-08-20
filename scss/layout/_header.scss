@@ -1,70 +1,28 @@
 // COMMON (Mobile first)
 
-#global-header {
+#nav-logo {
+  position: fixed;
   z-index: 4;
-  position: fixed;
-  top: 0;
+  top: 2em;
+  left: 4.5em;
 }
 
-.header {
-  height: $header-height;
-  width: 100%;
-  background-color: #fff;
-  position: fixed;
-  z-index: 3;
-  box-shadow: -2px 0 2px 0 rgba(0, 0, 0, .06), 2px 0 2px 0 rgba(0, 0, 0, .16), 0 2px 2px 0 rgba(0, 0, 0, .13);
+@media (max-width: 1265px) {
+  #nav-logo {
+    position: absolute;
+  }
+  .nav-trigger.nav-is-visible + #nav-logo{
+    position: fixed;
+  }
 }
 
-.nav-element.bg-voices:hover,
-.voices .index-title,
-.voices > #global-header {
-  background-color: map-get($cat-color, voices);
-}
-
-.nav-element.bg-news:hover,
-.news .index-title,
-.news > #global-header {
-  background-color: map-get($cat-color, news);
-}
-
-.arts .index-title,
-.arts > #global-header,
-.nav-element.bg-arts:hover {
-  background-color: map-get($cat-color, arts);
-}
-
-.nav-element.bg-sports:hover,
-.sports .index-title,
-.sports > #global-header {
-  background-color: map-get($cat-color, sports);
-}
-
-.nav-element.bg-science:hover,
-.science .index-title,
-.science > #global-header {
-  background-color: map-get($cat-color, science);
-}
-
-.curiosities .index-title,
-.curiosities > #global-header,
-.nav-element.bg-curiosities:hover {
-  background-color: map-get($cat-color, curiosities);
-}
-
-.home > #global-header {
-  background-color: #fff;
-}
-
-.logo {
-  float: left;
-  margin-top: 0.55rem;
-  transition: width 0.5s, transform 0.5s;
-}
+// .nav-trigger.nav-is-visible + #nav-logo {
+//   z-index: 10;
+// }
 
 .logo-img {
   height: 40px;
   width: 200px;
-  transition: all 0.5s, transform 0.4s;
 }
 
 .logo:focus {
@@ -73,16 +31,17 @@
 
 // NAV TRIGGER BUTTON
 .nav-trigger {
-  position: relative;
-  float: left;
+  position: fixed;
+  top: 2em;
+  left: 2em;
   height: 45px;
   width: 45px;
-  margin-top: 6px;
-  margin-left: 2rem;
   overflow: hidden;
   color: transparent;
   transition: margin 0.5s ease-in-out;
   cursor: pointer;
+  z-index: 4;
+  @extend .u-noselect
 }
 
 .nav-trigger span,
@@ -90,10 +49,16 @@
 .nav-trigger span:before {
   position: absolute;
   width: 28px;
-  height: 3px;
+  height: 2px;
   background-color: #000;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+.home .nav-trigger span,
+.home .nav-trigger span:after,
+.home .nav-trigger span:before {
+  background-color: $white;
 }
 
 .nav-trigger span {
@@ -117,20 +82,20 @@
   top: 8px;
 }
 
-.nav-is-visible .nav-trigger span {
+.nav-trigger.nav-is-visible  span {
   background-color: rgba(255, 255, 255, 0);
 }
 
-.nav-is-visible .nav-trigger span:after,
-.nav-is-visible .nav-trigger span:before {
+.nav-trigger.nav-is-visible span:after,
+.nav-trigger.nav-is-visible span:before {
   background-color: #000;
 }
 
-.nav-is-visible .nav-trigger span:before {
+.nav-trigger.nav-is-visible  span:before {
   @include transform( translate3D(0, 8px, 0) rotate(-45deg));
 }
 
-.nav-is-visible .nav-trigger span:after {
+.nav-trigger.nav-is-visible  span:after {
   @include transform( translate3D(0, -8px, 0) rotate(45deg));
 }
 

@@ -1,33 +1,28 @@
 img {
-    height: auto;
-    width: 100%;
+	height: auto;
+	width: 100%;
 }
 
 // CAPTIONS
 .wp-caption,
 figcaption {
-    color: map-get($ui-color, alt-dark);
-    text-align: left;
+	color: map-get($ui-color, alt-dark);
+	text-align: left;
 }
 
 .caption {
-    //	float: left;
-    font-size: 12px;
+	//	float: left;
+	font-size: 12px;
 }
 
 // PHOTOG CREDIT
 .media-credit {
-    float: right;
-    font-size: 12px;
-    white-space: normal
+	float: right;
+	font-size: 12px;
+	white-space: normal
 }
 
-.media-credit::before {
-    content: url(../img/camera.svg);
-    padding: 5px;
-}
-
-.media-credit-container {
-    //text-align: center;
-    //max-width: 100%;
-}
+// .media-credit::before {
+//     content: url(../img/camera.svg);
+//     padding: 5px;
+// }

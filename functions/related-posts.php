@@ -14,7 +14,7 @@ function plant_related_posts() {
 		);
 		$related_posts = get_posts( $args );
 		if($related_posts) {
-		echo __( '<h4>Related Posts</h4>', 'plantwp' );
+		echo __( '<div class="related-posts-container"><h4>Related Posts</h4>', 'plantwp' );
 		echo '<ul id="plant-related-posts">';
 			foreach ( $related_posts as $post ) : setup_postdata( $post ); ?>
 				<li class="related_post">
@@ -24,5 +24,5 @@ function plant_related_posts() {
 			<?php endforeach; }
 			}
 	wp_reset_postdata();
-	echo '</ul>';
+	echo '</ul></div>';
 } /* end plant related posts function */
