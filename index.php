@@ -19,7 +19,14 @@ if(isset($_SESSION["message"])) {
 			}
 		?>
 
-			<?php get_template_part('loop', 'index'); ?>
+
+		<?php
+			if ( !is_paged() ) { get_template_part('loop', 'index'); }
+			else {
+				get_template_part('loop');
+			}
+		?>
+			<?php  ?>
 
 		</div>
 		<?php get_template_part( 'pagination'); ?>

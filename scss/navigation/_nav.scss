@@ -12,7 +12,7 @@
 }
 
 .nav {
-	overflow-x: scroll;
+	// overflow-x: scroll;
 }
 
 .nav-container.nav-is-visible {
@@ -24,7 +24,7 @@
 	border-bottom: 1px solid rgba(25,25,25, 0.1);
 	a {
 		color: $black;
-		font-size: 24px;
+		font-size: 20px;
 		display: block;
 		padding: 1.2em 0 1.2em 2em;
 		&:hover {
@@ -41,8 +41,12 @@
 	left: 2.5em;
 	ul {
 		list-style-type: none;
+		display: flex;
 		.nav-social-item {
-
+			img {
+				width: 1.5em;
+			}
+			margin-left: 1em;
 			padding: .2em;
 		}
 	}
@@ -64,7 +68,7 @@
 	}
 }
 
-@media (max-height: 920px) {
+@media (max-height: 820px) {
 	.nav {
 		display: flex;
 		flex-wrap: wrap;
@@ -72,11 +76,12 @@
 
 	.nav-element {
 		border-bottom: none;
-		width: 40%;
-		text-align: center;
+		width: 45%;
+		// text-align: center;
 		a {
 			color: $black;
 			font-size: 18px;
+			padding: 1em 0 .2em 1.5em;
 			margin: 0;
 			&:hover {
 				color: $brand;
@@ -84,4 +89,14 @@
 			}
 		}
 	}
+	.nav-social-item img {
+		width: 1.2em !important;
+	}
 }
+
+// .touch-input {
+// 	overflow: hidden;
+// 	height: 100%;
+// 	width: 100%;
+// 	position: fixed;
+// }

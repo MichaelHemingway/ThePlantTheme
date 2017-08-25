@@ -64,6 +64,9 @@
 	figcaption {
 		margin: 0 20px
 	}
+	#the-article .article-title {
+		font-size: 1.7rem;
+	}
 }
 
 @media (max-width:1300px) {
@@ -107,6 +110,6 @@ q {
 	font-family: 'Merriweather', serif;
 }
 
-// body.page {
-// 	padding-top: 6em;
-// }
+.date {
+	color: #ccc;
+}

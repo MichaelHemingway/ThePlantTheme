@@ -4,6 +4,7 @@ function plant_related_posts() {
 	global $post;
 	$tags = wp_get_post_tags( $post->ID );
 	if($tags) {
+		$tag_arr = '';
 		foreach( $tags as $tag ) {
 			$tag_arr .= $tag->slug . ',';
 		}

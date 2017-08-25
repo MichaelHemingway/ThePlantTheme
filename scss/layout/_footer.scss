@@ -54,3 +54,10 @@
 	font-size: small;
 	flex-grow: 2;
 }
+
+@media (max-width: 550px) {
+	.footer-half {
+		width: 100%;
+	}
+}
+

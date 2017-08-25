@@ -8,7 +8,7 @@
 	$args = array(
 		'post_type'      => 'post', 
 		'post_status'    => 'publish',
-		'posts_per_page' => 20, 
+		'posts_per_page' => 8, 
 		'meta_query'     =>  array( 
 			array( 
 				'key' => 'post_size',
@@ -22,7 +22,7 @@
 		if ($recent->have_posts() ): while ($recent->have_posts()): $recent->the_post(); ?>
 
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class( 'story flex-item' . get_post_meta( $post->ID, 'post_size', true)); ?>>
+		<article id="post-<?php the_ID(); ?>" <?php post_class( 'story flex-item ' . get_post_meta( $post->ID, 'post_size', true)); ?>>
 
 			<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
 			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="item-image">
@@ -73,7 +73,7 @@
 $args = array(
 	'post_type'      => 'post', 
 	'post_status'    => 'publish',
-	'posts_per_page' => 20, 
+	'posts_per_page' => 5, 
 	'meta_query'     =>  array( 
 		array( 
 			'key' => 'post_size',
@@ -86,7 +86,7 @@ $args = array(
 	$featured = new WP_Query($args); 
 	if ($featured->have_posts() ): while ($featured->have_posts()): $featured->the_post(); ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class( 'story flex-item' . get_post_meta( $post->ID, 'post_size', true)); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'story flex-item ' . get_post_meta( $post->ID, 'post_size', true)); ?>>
 
 		<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
 		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="item-image">

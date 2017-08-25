@@ -36,6 +36,13 @@
 
 	ga('create', 'UA-69152759-1', 'auto');
 	ga('send', 'pageview');</script>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	  (adsbygoogle = window.adsbygoogle || []).push({
+	    google_ad_client: "ca-pub-9404505295518697",
+	    enable_page_level_ads: true
+	  });
+	</script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -93,10 +100,16 @@
 
 	<div class="nav-social">
 		<ul>
-			<li class="nav-social-item"><a href="https://www.instagram.com/theplantnews/">Instagram</a></li>
-			<li class="nav-social-item"><a href="https://www.facebook.com/theplantnews/">Facebook</a></li>
-			<li class="nav-social-item"><a href="https://scontent-yyz1-1.cdninstagram.com/t51.2885-15/e35/20759982_1719983854969465_7093691822865645568_n.jpg">Snapchat</a></li>
-			<li class="nav-social-item"><a href="https://twitter.com/theplantnews">Twitter</a></li>
+			<li class="nav-social-item"><a href="https://www.instagram.com/theplantnews/">
+				<img src="<?= get_template_directory_uri() ?>/assets/img/ui/instagram.svg" alt="Instagram">
+			</a></li>
+			<li class="nav-social-item"><a href="https://www.facebook.com/theplantnews/">
+				<img src="<?= get_template_directory_uri() ?>/assets/img/ui/facebook.svg" alt="Facebook">
+			</a></li>
+			<li class="nav-social-item"><a href="https://scontent-yyz1-1.cdninstagram.com/t51.2885-15/e35/20759982_1719983854969465_7093691822865645568_n.jpg">
+				<img src="<?= get_template_directory_uri() ?>/assets/img/ui/snapchat.svg" alt="Snapchat"></a></li>
+			<li class="nav-social-item"><a href="https://twitter.com/theplantnews">
+				<img src="<?= get_template_directory_uri() ?>/assets/img/ui/twitter.svg" alt="Twitter"></a></li>
 		</ul>
 	</div>
 </nav>
