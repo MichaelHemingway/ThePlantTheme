@@ -5,14 +5,12 @@ img {
 
 // CAPTIONS
 .wp-caption,
+.caption,
 figcaption {
 	color: map-get($ui-color, alt-dark);
 	text-align: left;
-}
-
-.caption {
-	//	float: left;
-	font-size: 12px;
+	font-style: italic;
+	font-size: 13px;
 }
 
 // PHOTOG CREDIT
@@ -21,8 +19,3 @@ figcaption {
 	font-size: 12px;
 	white-space: normal
 }
-
-// .media-credit::before {
-//     content: url(../img/camera.svg);
-//     padding: 5px;
-// }

@@ -19,25 +19,60 @@
 
 .article-header {
 	position: relative;
+	grid-area: header;
 
 	.article-featured-image {
 		max-height: 50vh;
 		overflow: hidden;
 	}
 }
+.article-meta-container {
+	grid-area: meta;
+	max-width: 700px;		
+	margin-bottom: 0;
+	margin: 0 auto;
+	width: 100%;
+}
+.article-details {
+	grid-area: details;
+}
 
 #the-article {
-	.article-title {
-		width: 100%;
-		vertical-align: top;
-		max-width: 900px;
-		margin-right: -10em;
-		margin-top: -5rem;
-		margin-bottom: 0;
-	}
+	grid-area: article;
 	max-width: 700px;
 	margin: 0 auto;
 	padding-bottom: 3rem;
+}
+
+// the article + css grid
+.site-container.single {
+	grid-template-areas:
+		"header"
+		"details"
+		"meta"
+		"article"
+		"sidebar";
+
+	grid-template-columns: 100%;
+	grid-template-rows: 1fr
+                      100px
+                      auto
+                      auto;
+}
+
+@include media('>desktop') {
+	.site-container.single {
+		display: grid;
+		grid-template-areas: 
+			"header header header"
+			"details meta sidebar"
+			"details article sidebar";
+
+		grid-template-columns: 250px 1fr 310px;
+		grid-template-rows: auto
+	                      150px
+	                      1fr;
+	}
 }
 
 @import 'loop';

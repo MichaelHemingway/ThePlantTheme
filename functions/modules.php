@@ -236,3 +236,73 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+
+add_filter('the_content', 'plant_in_text_ads');
+function plant_in_text_ads ($content) {
+	$top_ad_content = prefix_insert_post_ads( $content );
+	return prefix_insert_long_post_ads($top_ad_content);
+}
+
+// add_filter( 'the_content', 'prefix_insert_long_post_ads' );
+function prefix_insert_long_post_ads( $content ) {
+	$ad_code = '<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-9404505295518697"
+     data-ad-slot="3542323995"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>';
+	if ( is_single() && ! is_admin() ) {
+		return prefix_insert_after_paragraph( $ad_code, 9, $content );
+	}
+	return $content;
+}
+
+
+// add_filter( 'the_content', 'prefix_insert_post_ads' );
+function prefix_insert_post_ads( $content ) {
+	$ad_code = '<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-9404505295518697"
+     data-ad-slot="6850125561"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>';
+	if ( is_single() && ! is_admin() ) {
+		return prefix_insert_after_paragraph( $ad_code, 3, $content );
+	}
+	return $content;
+}
+
+/**
+ * Insert something after a specific paragraph in some content.
+ *
+ * @param  string $insertion    Likely HTML markup, ad script code etc.
+ * @param  int    $paragraph_id After which paragraph should the insertion be added. Starts at 1.
+ * @param  string $content      Likely HTML markup.
+ *
+ * @return string               Likely HTML markup.
+ */
+function prefix_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
+	$closing_p = '</p>';
+	$paragraphs = explode( $closing_p, $content );
+	foreach ($paragraphs as $index => $paragraph) {
+		// Only add closing tag to non-empty paragraphs
+		if ( trim( $paragraph ) ) {
+			// Adding closing markup now, rather than at implode, means insertion
+			// is outside of the paragraph markup, and not just inside of it.
+			$paragraphs[$index] .= $closing_p;
+		}
+		// + 1 allows for considering the first paragraph as #1, not #0.
+		if ( $paragraph_id == $index + 1 ) {
+			$paragraphs[$index] .= $insertion;
+		}
+	}
+	return implode( '', $paragraphs );
+}

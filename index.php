@@ -19,6 +19,17 @@ if(isset($_SESSION["message"])) {
 			}
 		?>
 
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- front-page-1 -->
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-client="ca-pub-9404505295518697"
+		     data-ad-slot="5617822996"
+		     data-ad-format="auto"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
 
 		<?php
 			if ( !is_paged() ) { get_template_part('loop', 'index'); }
@@ -30,6 +41,17 @@ if(isset($_SESSION["message"])) {
 
 		</div>
 		<?php get_template_part( 'pagination'); ?>
+
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- front-page-2 -->
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-client="ca-pub-9404505295518697"
+		     data-ad-slot="7145639034"
+		     data-ad-format="auto"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
 
 	</section>
 

@@ -59,6 +59,21 @@
 		</article>
 
 		<?php endif; ?>
+
+		<!-- Native ad: "in-feed-sm-1" -->
+		<article id="post-nadsm1" class="story flex-item">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-format="fluid"
+		     data-ad-layout="image-top"
+		     data-ad-layout-key="-92+1e-e0+ex+k7"
+		     data-ad-client="ca-pub-9404505295518697"
+		     data-ad-slot="6152175468"></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+		</article>
 	</div>
 </section>
 

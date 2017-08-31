@@ -1,18 +1,18 @@
 #sidebar {
-	display: none;
+	grid-area: sidebar;
 	width: 310px; //12px to spare.
-	margin: 12px 0 12px 12px;
 	list-style: none;
 	background: map-get($ui-color, brand);
+	margin-bottom: 1em;
+	margin-top: 1em;
 	ul {
 		list-style: none;
 	}
 }
 
-@media screen and (min-width:1080px) {
+@include media('<desktop') {
 	#sidebar {
-		float: right;
-		display: block;
+		width: 100%;
 	}
 }
 
