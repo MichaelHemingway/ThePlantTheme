@@ -1,0 +1,98 @@
+// |-----------------------------------------------------------\\
+// | Global variables                                          ||
+// |-----------------------------------------------------------//
+
+
+$cat-color: (
+  science:      #26A69A, // Material Teal 400
+  arts:         #42A5F5, // Material Blue 400
+  curiosities:  #FF7043, // Material Orange 400
+  news:         #78909C,
+  sports:       #ef5350,
+  voices:       #7E57C2,
+  lifestyle:    #BF82A5
+);
+
+$brand: #2A603B;
+$brand-dark: #2E372E;
+
+$black: #2E211B;
+$dark: #222;
+$grey: #eee;
+$white: #fff;
+$light: #f1f1f1;
+
+$ui-color: (
+  brand:        $brand,
+  brand-light:  $brand-dark,
+  brand-dark:   #2E372E,
+  alt-bright:   $brand,
+  alt-dark:     #666
+);
+
+// SEARCH & HEADER
+$header-height: 60px;
+$search-height: 70px;
+$nav-height: 30px;
+
+
+// |-----------------------------------------------------------\\
+// | Breakpoints                                               ||
+// |-----------------------------------------------------------//
+
+$breakpoints: (
+  'phone': 320px,
+  'phablet': 550px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'ultrawide': 1920px
+) !default;
+
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi)'
+) !default;
+
+//Grid Variables
+$container-width: 960px !default;
+$container-width-larger-than-mobile: 85% !default;
+$container-width-larger-than-phablet: 80% !default;
+$total-columns: 12 !default;
+$column-width: 100 / $total-columns !default; // calculates individual column width based off of # of columns
+$column-margin: 4% !default; // space between columns
+
+///
+/// Defines a number to be added or subtracted from each unit when declaring breakpoints with exclusive intervals
+///
+/// @example scss - Interval for pixels is defined as `1` by default
+///  @include media('>128px') {}
+///
+///  /* Generates: */
+///  @media (min-width: 129px) {}
+///
+/// @example scss - Interval for ems is defined as `0.01` by default
+///  @include media('>20em') {}
+///
+///  /* Generates: */
+///  @media (min-width: 20.01em) {}
+///
+/// @example scss - Interval for rems is defined as `0.1` by default, to be used with `font-size: 62.5%;`
+///  @include media('>2.0rem') {}
+///
+///  /* Generates: */
+///  @media (min-width: 2.1rem) {}
+///
+$unit-intervals: (
+  'px': 1,
+  'em': 0.01,
+  'rem': 0.1
+) !default;
+
+$im-media-support: true !default;
+$im-no-media-breakpoint: 'desktop' !default;
+$im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;

@@ -1,10 +1,10 @@
 /*
 Theme Name: The Plant
-Theme URI: http://theplantnewspaper.com/
+Theme URI: https://theplantnewspaper.com/
 Author: Michael Hemingway
 Author URI: http://mikemingway.com/
 Description: The Plant's official Newspaper's Website's theme.
-Version: 1.3.0
+Version: 3.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: plant
@@ -21,42 +21,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @-ms-viewport {
   width: device-width;
 }
-// |-----------------------------------------------------------\\
-// | Global variables                                          ||
-// |-----------------------------------------------------------//
-
-
-$cat-color: (
-  science:      #26A69A, // Material Teal 400
-  arts:         #42A5F5, // Material Blue 400
-  curiosities:  #FF7043, // Material Orange 400
-  news:         #78909C,
-  sports:       #ef5350,
-  voices:       #7E57C2,
-  lifestyle:    #BF82A5
-);
-
-$brand: #2A603B;
-$brand-dark: #2E372E;
-
-$black: #2E211B;
-$dark: #222;
-$grey: #eee;
-$white: #fff;
-$light: #f1f1f1;
-
-$ui-color: (
-  brand:        $brand,
-  brand-light:  $brand-dark,
-  brand-dark:   #2E372E,
-  alt-bright:   $brand,
-  alt-dark:     #666
-);
-
-// SEARCH & HEADER
-$header-height: 60px;
-$search-height: 70px;
-$nav-height: 30px;
 
 // |-----------------------------------------------------------\\
 // | Partials                                                  ||
@@ -68,6 +32,3 @@ $nav-height: 30px;
 @import "modules/modules";
 @import "navigation/navigation";
 @import "typography/typography";
-// |-----------------------------------------------------------\\
-// | Breakpoints                                               ||
-// |-----------------------------------------------------------//

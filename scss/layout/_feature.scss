@@ -28,12 +28,16 @@
 	bottom: 0;
 	right: 0;
 	z-index: 2;
-	font-weight: bolder;
+	// font-weight: bolder;
 	padding: .4em;
 	padding-right: 2em;
 	font-size: 2em;
 	max-width: 750px;
 	color: $white;
+	font-family: 'Oswald', sans-serif;
+	// font-family: 'Anton', sans-serif;
+
+	text-transform: uppercase;
 	@include background-opacity($brand-dark, 0.7);
 }
 

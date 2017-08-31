@@ -126,8 +126,8 @@
 		}
 		.story.large {
 			width: 66%;
-			margin-top: 2em;
-			padding: 1em;
+			// margin-top: 2em;
+			padding: 0em;
 			background: #eee;
 			.item-image {
 				display: inline-block;
@@ -137,10 +137,13 @@
 				display: inline-block;
 				padding-left: 1em;
 				vertical-align: top;
+				max-width: 45%;
 			}
 			.item-title {
+				font-family: 'Oswald', sans-serif;
 				font-size: 35px;
-				font-weight: bold;
+				text-transform: uppercase;
+				// font-weight: bold;
 				line-height: 1.2;
 				padding-top: 1em;
 				display: inline-block;
@@ -156,6 +159,11 @@
 			.item-image {
 				min-height: 950px;
 				width: 50%;
+			}
+			.item-title {
+				font-family: 'Oswald', sans-serif;
+				font-size: 35px;
+				text-transform: uppercase;
 			}
 		}
 	}

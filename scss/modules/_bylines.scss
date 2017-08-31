@@ -31,7 +31,7 @@
 	// grid-template-columns: 200px auto 50px 40px
 	
 	.article-byline {
-		margin: .5em;
+		margin-top: .5em;
 		height: 4em;
 		width: 300px;
 		display: inline-block;
@@ -49,6 +49,35 @@
 			height: 70px;
 			float: left;
 			border-radius: 50%;
+		}
+	}
+}
+
+@include media('>desktop') {
+	.article-details {
+		margin-top: 1em;
+		// grid-template-columns: 200px auto 50px 40px
+		
+		.article-byline {
+			margin: .5em;
+			height: 4em;
+			width: 300px;
+			display: inline-block;
+			.author-details {
+				margin: 10px;
+				float: left;
+				text-transform: capitalize;
+			}
+			.byline-twitter {
+				font-style: italic;
+				color: #aaa;
+			}
+			.post-byline-image {
+				width: 70px;
+				height: 70px;
+				float: left;
+				border-radius: 50%;
+			}
 		}
 	}
 }
