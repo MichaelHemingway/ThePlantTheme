@@ -32,11 +32,13 @@
 	.article-byline {
 		margin-top: .5em;
 		height: 4em;
-		width: 300px;
+		// width: 300px;
 		display: inline-block;
 		.author-details {
 			margin: 10px;
 			float: left;
+			color: #777;
+			font-size: 16px;
 		}
 		.byline-twitter {
 			font-style: italic;
@@ -50,3 +52,16 @@
 		}
 	}
 }
+
+// @include media('>desktop') {
+// 	.article-details {
+// 		.article-byline {
+// 			margin-top: 1em;
+// 			// width: 300px;
+// 			display: inline-block;
+// 			.author-details {
+// 				margin: 1em 1em 0 0;
+// 			}
+// 		}
+// 	}
+// }

@@ -55,9 +55,12 @@
 	flex-grow: 2;
 }
 
-@media (max-width: 550px) {
+@include media('<tablet') {
 	.footer-half {
 		width: 100%;
+	}
+	.footer-submit {
+		padding: 0 0 2em 0;
 	}
 }
 

@@ -1,19 +1,20 @@
 .nav-container {
 	@include transform(translate3D(-105%, 0, 0)); // toggle off
-	@include transition(transform 200ms ease);
+	@include transition(transform 0.45s ease-in-out);
 	position: fixed;
 	top: 0;
 	width: 100vw;
-	
+	will-change: transform;
 	background-color: $grey;
 	z-index: 3;
 	padding-top: 6em;
 	height: 100vh;
+	background-image: url("../img/diagonal-striped-brick.png");
 }
 
-.nav {
-	// overflow-x: scroll;
-}
+// .nav {
+// 	// overflow-x: scroll;
+// }
 
 .nav-container.nav-is-visible {
 	// toggle on
@@ -29,6 +30,7 @@
 		padding: 1.2em 0 1.2em 2em;
 		&:hover {
 			color: $brand;
+			background-color: $grey;
 			text-decoration: none;
 		}
 	}

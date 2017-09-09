@@ -8,7 +8,7 @@
 	$args = array(
 		'post_type'      => 'post', 
 		'post_status'    => 'publish',
-		'posts_per_page' => 8, 
+		'posts_per_page' => 7, 
 		'meta_query'     =>  array( 
 			array( 
 				'key' => 'post_size',

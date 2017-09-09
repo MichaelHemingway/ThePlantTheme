@@ -15,15 +15,15 @@ function plant_related_posts() {
 		);
 		$related_posts = get_posts( $args );
 		if($related_posts) {
-		echo __( '<div class="related-posts-container"><h4>Related Posts</h4>', 'plantwp' );
-		echo '<ul id="plant-related-posts">';
+		echo __( '<section class="related-posts-container">', 'plantwp' );
+		echo '<div id="plant-related-posts"><h4>Related Posts</h4><hr /><ul>';
 			foreach ( $related_posts as $post ) : setup_postdata( $post ); ?>
 				<li class="related_post">
 					<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-					<?php get_template_part( 'parts/content', 'byline' ); ?>
+					<span class="author">by <?php the_author_posts_link(); ?></span>
 				</li>
 			<?php endforeach; }
 			}
 	wp_reset_postdata();
-	echo '</ul></div>';
+	echo '</ul></div></section>';
 } /* end plant related posts function */

@@ -8,13 +8,10 @@
 		} else {
 			echo '<a href="'. get_home_url().'/'.get_page_uri(get_page_by_title('submit')).'"><img class="sidebar-img" src="'. get_template_directory_uri().'/assets/img/sidebar/submit-0.jpg" alt="Submit your work"></a>';
 		}?>
-		<div class="sidebar-widget">
-			<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
-		</div>
+		
+		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
 
-		<div class="sidebar-widget">
-			<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-2')) ?>
-		</div>
+		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-2')) ?>
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<!-- post-sidebar-1 -->
 		<ins class="adsbygoogle"

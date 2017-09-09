@@ -21,13 +21,13 @@ function plant_theme_support() {
 	// Add HTML5 Support
 	add_theme_support( 'html5',
 	         array(
-	         	'comment-list',
-	         	'comment-form',
 	         	'search-form',
 						'gallery',
 						'caption'
 	         )
 	);
+
+	add_theme_support( 'post-formats', array( 'gallery' ) );
 
 	// Set the maximum allowed width for any content in the theme, like oEmbeds and images added to posts.
 	if ( ! isset( $content_width ) ) {

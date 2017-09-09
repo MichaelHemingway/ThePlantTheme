@@ -54,7 +54,7 @@
 
 	.item-image {
 		display: block;
-		max-height: 140px;
+		max-height: 160px;
 		overflow: hidden;
 	}
 
@@ -100,7 +100,7 @@
 	margin: 10px 10px 0 0;
 
 	.item-image {
-		max-height: 300px;
+		max-height: 350px;
 	}
 }
 
@@ -184,4 +184,16 @@
 
 .stories.search .story {
 	max-width: 400px;
+}
+
+@include media('>=900px', '<=1200px') {
+	.stories .story .item-image {
+		max-height: 110px;
+	}
+}
+
+@include media('<=620px', '>=520px') {
+	.stories .story .item-image {
+		max-height: 130px;
+	}
 }

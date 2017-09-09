@@ -31,7 +31,7 @@
 				<?php endif; ?>
 
 				<div class="author-details">
-					<p class="author" rel="author"><?php the_author_posts_link(); ?></p>
+					<p class="author" rel="author">by <?php the_author_posts_link(); ?></p>
 					<?php // twitter handle
 					$handle = get_field('byline_twitter', $byline); if( $handle ): ?>
 						<p class="byline-twitter"><?php echo '@'.$handle; ?></p>
@@ -66,7 +66,7 @@
 		</article>
 		<?php endif; ?>
 
-	<?php get_sidebar() ?>
+	<?php if ('gallery' !== get_post_format()): get_sidebar(); endif;?>
 	</section>
 	<?php plant_related_posts(); ?>
 </main>

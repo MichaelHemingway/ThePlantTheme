@@ -1,5 +1,5 @@
 #the-article p {
-	margin: 1.5em 0;
+	// margin: 1.5em 0;
 	color: $black;
 	font-size: 18px;
 	line-height: 1.67;
@@ -10,13 +10,13 @@
 	-moz-font-feature-settings: "liga" on, "salt" on;
 	font-feature-settings: "liga" on, "salt" on;
 	word-wrap: break-word;
-	margin-bottom: 1em;
+	margin-bottom: 2em;
 	a {
-		color: map-get($ui-color, brand-light);
-		border-bottom: 2px solid #4D8FAC;
-		box-shadow: inset 0 -6px 0 #4D8FAC;
+		// color: map-get($ui-color, alt-bright);
+		// border-bottom: -1px solid rgba(map-get($ui-color, alt-bright), 0.5);
+		box-shadow: inset 0 -7px 0 rgba(map-get($ui-color, alt-bright), 0.5);
 		&:hover {
-			background-color: #4D8FAC;
+			background-color: map-get($ui-color, alt-bright);
 			color: $white !important;
 			text-decoration: none;
 		}
@@ -36,10 +36,25 @@
 	ul {
 		margin: 1em 0 2em 2em;
 	}
+
+	strong {
+		font-style: italic;
+	}
+	figure, iframe {
+		margin-bottom: 2em;
+	}
 }
 
+// @include media('>desktop') {
+// 	#the-article figure {
+		
+// 		// margin-left: -140px;
+// 		height: auto;
+// 	}
+// }
+
 .article-title {
-	font-size: 2.7rem;
+	font-size: 2rem;
 	line-height: 1.2em;
 	word-wrap: break-word;
 	font-family: 'Oswald', sans-serif;
@@ -47,13 +62,17 @@
 	margin-bottom: 0;
 }
 
-@media (min-width:500px) {
+@include media('>tablet') {
 	#the-article p {
-		font-size: 21px;
+		font-size: 20px;
 		line-height: 1.58;
 		letter-spacing: -0.003em;
 	}
+	.article-title {
+		font-size: 2.7rem;
+	}
 }
+
 
 @media (max-width:550px) {
 	.is-single {
@@ -66,17 +85,6 @@
 	figcaption {
 		margin: 0 20px
 	}
-	#the-article .article-title {
-		font-size: 2rem;
-	}
-}
-
-@media (max-width:1300px) {
-	#the-article .article-title {
-		max-width: 900px;
-		margin-bottom: 0;
-	}
-	
 }
 
 q {

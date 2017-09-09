@@ -1,15 +1,30 @@
 @import 'bylines';
+@import 'gallery';
 
 .related-posts-container { // div
 	background: $grey;
 }
 
-#plant-related-posts, .related-posts-container h4 {
+#plant-related-posts {
 	max-width: 700px;
 	margin: 0 auto;
 	padding: 2em 0 2em 0;
+	list-style-type: none;
+	@extend .site-container;
+	min-height: auto;
+	h4 {
+		font-family: 'Oswald', sans-serif;
+		text-transform: uppercase;
+	}
+	ul {
+		list-style-type: decimal-leading-zero;
+		list-style-position: inside;
+	}
+	.related_post {
+		padding-bottom: 1em;
+	}
+	.author {
+		font-style: italic;
+	}
 }
 
-#plant-related-posts {
-	list-style-type: none;
-}

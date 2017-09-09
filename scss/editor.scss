@@ -22,8 +22,8 @@ $cat-color: (
   lifestyle:    #BF82A5
 );
 
+@import "utility/utility";
 @import "typography/typography";
-@import url(https://fonts.googleapis.com/css?family=Merriweather:900);
 
 hr {
 	background-color: #ccc;

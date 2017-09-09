@@ -4,17 +4,28 @@
 	list-style: none;
 	background: map-get($ui-color, brand);
 	margin-bottom: 1em;
-	margin-top: 1em;
+	margin-top: 2em;
+	padding: 5px;
+	height: 767px;
 	ul {
 		list-style: none;
 	}
 }
 
+
+
 @include media('<desktop') {
 	#sidebar {
-		width: 100%;
+		display: none;
 	}
 }
+
+@include media('>desktop') {
+	#the-article{
+		padding-right: 3em;
+	}
+}
+
 
 .sidebar-widget {
 	padding: .5em;
@@ -37,12 +48,8 @@
 	}
 }
 
-.short-post {
+.no-sidebar, .short-post {
 	#sidebar {
-		display: none;
+		display: none !important;
 	}
-}
-
-body.no-sidebar #sidebar {
-	display: none !important;
-}
+}  

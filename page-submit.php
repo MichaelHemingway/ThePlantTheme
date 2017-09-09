@@ -17,7 +17,7 @@
 
 </div>
 <!-- /wrapper -->
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <?php wp_footer(); ?>
 <script>var prefetch = document.createElement('meta');
 prefetch.rel = 'prerender';
