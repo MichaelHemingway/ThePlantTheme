@@ -245,7 +245,7 @@ function plant_in_text_ads ($content) {
 
 // add_filter( 'the_content', 'prefix_insert_long_post_ads' );
 function prefix_insert_long_post_ads( $content ) {
-	$ad_code = '<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	$ad_code = '<div style="padding-bottom:2em;"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-format="fluid"
@@ -264,7 +264,7 @@ function prefix_insert_long_post_ads( $content ) {
 
 // add_filter( 'the_content', 'prefix_insert_post_ads' );
 function prefix_insert_post_ads( $content ) {
-	$ad_code = '<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	$ad_code = '<div style="padding-bottom:2em;"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-format="fluid"

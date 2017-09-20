@@ -16,7 +16,7 @@ function site_scripts() {
 	}
 
 	// MAIN CSS
-	wp_register_style('plant', get_template_directory_uri() . '/assets/css/main.css', array() , '672', 'all');
+	wp_register_style('plant', get_template_directory_uri() . '/assets/css/main.css', array() , '673', 'all');
 	wp_enqueue_style('plant'); // Enqueue it!
 }
 add_action('wp_enqueue_scripts', 'site_scripts', 999);
