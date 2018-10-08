@@ -5,41 +5,40 @@
  */
 
 (function ($) {
-	'use strict';
+  'use strict';
 
-	var nav = $('#nav-container'),
-		tglState = false;
+  var nav = $('#nav-container'),
+	tglState = false;
 
-	function toggle () {
+  function toggle () {
 		$('#nav-container').toggleClass('nav-is-visible');
 		$('#nav-trigger').toggleClass('nav-is-visible');
 		$('#dismiss-overlay').toggleClass('hidden');
 		tglState = !tglState;
-	}
+  }
 
-	$(document).ready(function() {
-
+  $(document).ready(function() {
 		$('#nav-trigger').click( function () {
-			toggle();
+		  toggle();
 		});
 
 		// THE DISMISS OVERLAY
 		$('#dismiss-overlay').on("click", function () {
-			toggle();
+		  toggle();
 		});
-	});
+  });
 
-	$(window).on('scroll', function () {
+  $(window).on('scroll', function () {
 		if (tglState) {
-			toggle();
+		  toggle();
 		}
-	});
+  });
 
-	if ('ontouchstart' in window) {
-	    $(document).on('focus', 'textarea,input,select', function() {
-	        $('body').addClass('touch-input');
-	    }).on('blur', 'textarea,input,select', function() {
-	        $('body').removeClass('touch-input');
-	    });
-	}
+  if ('ontouchstart' in window) {
+	  $(document).on('focus', 'textarea,input,select', function() {
+		  $('body').addClass('touch-input');
+	  }).on('blur', 'textarea,input,select', function() {
+		  $('body').removeClass('touch-input');
+	  });
+  }
 }(jQuery));

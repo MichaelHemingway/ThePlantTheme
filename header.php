@@ -40,7 +40,7 @@
 	<script>
 	  (adsbygoogle = window.adsbygoogle || []).push({
 	    google_ad_client: "ca-pub-9404505295518697",
-	    enable_page_level_ads: true
+	    enable_page_level_ads: false
 	  });
 	</script>
 </head>
@@ -77,6 +77,14 @@
 			$cat_link = get_category_link( $id );
 			echo $cat_link; ?>
 			">Arts &amp; Culture</a>
+		</li>
+		
+		<li class="nav-element bg-visual">
+			<a itemprop="url" href="<?php $cat_id = get_category_by_slug('visual-art');
+			$id = $cat_id->term_id;
+			$cat_link = get_category_link( $id );
+			echo $cat_link; ?>
+			">Visual Arts</a>
 		</li>
 
 		<li class="nav-element bg-sports">

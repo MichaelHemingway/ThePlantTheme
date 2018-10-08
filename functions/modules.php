@@ -237,7 +237,7 @@ if(function_exists("register_field_group"))
 	));
 }
 
-add_filter('the_content', 'plant_in_text_ads');
+//add_filter('the_content', 'plant_in_text_ads');
 function plant_in_text_ads ($content) {
 	$top_ad_content = prefix_insert_post_ads( $content );
 	return prefix_insert_long_post_ads($top_ad_content);

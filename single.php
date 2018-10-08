@@ -14,7 +14,7 @@
 			<figcaption>
 				<span class="media-credit"><?php 
 					the_post_thumbnail_caption();
-					?> via <?php the_media_credit_html( get_post_thumbnail_id() ); ?>
+					?> via <?php the_media_credit_html( get_post_thumbnail_id() ); ?></span>
 			</figcaption>
 			<?php endif; ?>
 			<?php edit_post_link(); ?> 
